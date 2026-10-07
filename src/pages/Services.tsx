@@ -9,10 +9,10 @@ export default function Services() {
         crumb="Services"
         title={
           <>
-            Services built to move <em>bold ideas</em> forward.
+            Five things we're good at. <em>Nothing we're not.</em>
           </>
         }
-        lede="End-to-end technology and consulting services to help you innovate, optimize and grow — from strategy through to production."
+        lede="We turned down a client last quarter because the project wasn't something we were actually good at. Here's the list of what we are."
       />
 
       <section className="section tight">

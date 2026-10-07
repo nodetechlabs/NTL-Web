@@ -5,7 +5,7 @@ import { industries } from "../data/industries";
 
 export default function Footer() {
   return (
-    <footer className="site-footer" id="contact">
+    <footer className="site-footer">
       <div className="footer-glass">
         <div className="footer-ribbons">
           <svg viewBox="0 0 1600 500" preserveAspectRatio="none">
@@ -30,8 +30,8 @@ export default function Footer() {
 
         <div className="footer-top">
           <div className="footer-col brand-col">
-            <Logo size={30} />
-            <p>A software services and consulting company helping businesses build, scale and transform with technology and AI.</p>
+            <Logo size={30} onDark />
+            <p>A small engineering studio. We write the code ourselves, show up to your standups, and don't disappear after launch.</p>
             <div className="socials">
               <a href="#" aria-label="LinkedIn">in</a>
               <a href="#" aria-label="X">X</a>

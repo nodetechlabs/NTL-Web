@@ -9,10 +9,10 @@ export default function Work() {
         crumb="Work"
         title={
           <>
-            Real projects. <em>Real outcomes.</em>
+            Three projects we're <em>allowed to show you</em>.
           </>
         }
-        lede="A look at how we've helped teams across healthcare, commerce and finance solve real business challenges with modern technology."
+        lede="Most of what we build lives behind an NDA forever. These three clients let us talk about what actually happened — numbers included."
       />
 
       <section className="section tight">

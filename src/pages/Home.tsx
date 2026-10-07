@@ -19,7 +19,7 @@ export default function Home() {
           <div>
             <p className="label">WHAT WE DO</p>
             <h2>Our Services</h2>
-            <p className="sub">End-to-end technology and consulting services to help you innovate, optimize and grow.</p>
+            <p className="sub">Five things we're actually good at — not a list of everything we'll say yes to.</p>
           </div>
           <div className="carousel-controls">
             <button className="circle-btn" aria-label="Previous" onClick={() => scroll(-1)}>
@@ -59,7 +59,7 @@ export default function Home() {
           <div>
             <p className="label">WHO WE SERVE</p>
             <h2>Industries</h2>
-            <p className="sub">Deep domain expertise across the sectors where technology matters most.</p>
+            <p className="sub">We've picked up the specific headaches of a few industries. Here's which ones.</p>
           </div>
           <Link to="/industries" className="view-all">
             View All Industries <span className="arrow">→</span>
@@ -81,9 +81,9 @@ export default function Home() {
       <section className="section" id="work">
         <div className="section-head">
           <div>
-            <p className="label">REAL PROJECTS. REAL OUTCOMES.</p>
+            <p className="label">A FEW WE CAN TALK ABOUT</p>
             <h2>Featured Work</h2>
-            <p className="sub">Solving real business challenges with modern technology.</p>
+            <p className="sub">Most of our client work is under NDA. These three weren't.</p>
           </div>
           <Link to="/work" className="view-all">
             View All Case Studies <span className="arrow">→</span>
@@ -116,10 +116,7 @@ export default function Home() {
           <div>
             <p className="label">WHO WE ARE</p>
             <h2>About NodeTech Labs</h2>
-            <p className="sub">
-              A technology consulting and product engineering partner, built to help ambitious teams ship faster without cutting corners on
-              quality.
-            </p>
+            <p className="sub">We're a small studio, not an agency with a bench of juniors. You work with the people actually writing the code.</p>
           </div>
           <Link to="/about" className="view-all">
             More About Us <span className="arrow">→</span>
@@ -129,18 +126,37 @@ export default function Home() {
         <div className="detail-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
           <div className="detail-card">
             <div className="svc-icon">★</div>
-            <h3>Our Mission</h3>
-            <p>Help businesses turn bold ideas into real, measurable impact through modern technology.</p>
+            <h3>What We're After</h3>
+            <p>Software that's still running — and still making sense to whoever inherits it — three years after we hand it off.</p>
           </div>
           <div className="detail-card">
             <div className="svc-icon">◆</div>
-            <h3>Our Approach</h3>
-            <p>Embedded partnership over handoffs — we work as an extension of your team, not a vendor.</p>
+            <h3>How We Work</h3>
+            <p>We sit in your standups, not just your kickoff calls. By week two you'll forget we're a separate company.</p>
           </div>
           <div className="detail-card">
             <div className="svc-icon">⬡</div>
-            <h3>Our Team</h3>
-            <p>Senior engineers, designers and strategists who've shipped at scale across every industry we serve.</p>
+            <h3>Who's Actually Doing This</h3>
+            <p>No account managers relaying messages to engineers in another timezone. You talk to the people typing the code.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Contact CTA ===== */}
+      <section className="section tight" id="contact">
+        <div className="contact-cta detail-card">
+          <p className="label" style={{ textAlign: "center" }}>
+            GET IN TOUCH
+          </p>
+          <h2>Let's build something real.</h2>
+          <p className="sub">Tell us about your project — we'll get back to you within one business day.</p>
+          <div className="contact-cta-actions">
+            <Link to="/contact" className="btn-primary">
+              Start a Project <span className="arrow">→</span>
+            </Link>
+            <a href="mailto:info@nodetechlabs.com" className="view-all">
+              info@nodetechlabs.com
+            </a>
           </div>
         </div>
       </section>

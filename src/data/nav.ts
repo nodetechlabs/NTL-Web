@@ -9,4 +9,5 @@ export const navItems: NavItem[] = [
   { label: "Work", path: "/work" },
   { label: "About", path: "/about" },
   { label: "Resources", path: "/resources" },
+  { label: "Contact", path: "/contact" },
 ];

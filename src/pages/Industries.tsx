@@ -9,10 +9,10 @@ export default function Industries() {
         crumb="Industries"
         title={
           <>
-            Domain expertise across <em>every sector</em> we serve.
+            We've made the mistakes already, <em>in these five</em>.
           </>
         }
-        lede="We bring deep, sector-specific experience to every engagement — so the solutions we build fit how your industry actually works."
+        lede="Every industry has its own landmines — the compliance rule nobody mentions until week four, the one integration that's always broken. We've stepped on most of them in these sectors already."
       />
 
       <section className="section tight">

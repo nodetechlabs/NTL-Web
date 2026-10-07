@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Mascot } from "page-mascot";
 import Building from "./Building";
 
 export default function Hero() {
@@ -23,7 +24,9 @@ export default function Hero() {
         <div className="hero-fog" />
         <div className="tree-layer tree-left" />
         <div className="tree-layer tree-right" />
-        <Building />
+        <div className="building-sway">
+          <Building />
+        </div>
         <div className="light-trails">
           <svg viewBox="0 0 1600 900" preserveAspectRatio="none">
             <path
@@ -48,10 +51,10 @@ export default function Hero() {
 
       <div className="annotation">
         <svg width="90" height="70" viewBox="0 0 90 70" className="arrow-curve">
-          <path d="M5,5 C40,5 20,55 85,60" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)" />
+          <path d="M5,5 C40,5 20,55 85,60" stroke="currentColor" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)" />
           <defs>
             <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,0.5)" />
+              <path d="M0,0 L8,4 L0,8 Z" fill="currentColor" />
             </marker>
           </defs>
         </svg>
@@ -68,6 +71,12 @@ export default function Hero() {
 
       <div className="hero-content">
         <div className="hero-left">
+          <Mascot
+            directions="/mascots/harshith-directions.webp"
+            reactions="/mascots/harshith-reactions.webp"
+            label="Harshith"
+            size={100}
+          />
           <p className="eyebrow">
             Technology Consulting <span className="x">×</span> AI Solutions
           </p>
@@ -78,7 +87,10 @@ export default function Hero() {
               Into <em>Real Impact.</em>
             </span>
           </h1>
-          <p className="hero-sub">NodeTech Labs partners with businesses to build, scale and transform with modern technology, AI and innovation.</p>
+          <p className="hero-sub">
+            We're the engineers you call when the in-house team is stretched thin or the project needs someone who's shipped this exact thing
+            before. Software, cloud, AI — built, not just planned.
+          </p>
 
           <div className="hero-ctas">
             <Link to="/contact" className="btn-primary">
@@ -87,7 +99,7 @@ export default function Hero() {
             <button className="btn-play">
               <span className="play-circle">
                 <svg width="14" height="14" viewBox="0 0 14 14">
-                  <polygon points="3,2 12,7 3,12" fill="#fff" />
+                  <polygon points="3,2 12,7 3,12" fill="currentColor" />
                 </svg>
               </span>
               Watch Our Story <span className="muted">2 min</span>
@@ -122,7 +134,7 @@ export default function Hero() {
               </h3>
               <button className="circle-arrow" aria-label="Open">
                 <svg width="16" height="16" viewBox="0 0 24 24">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
             </div>

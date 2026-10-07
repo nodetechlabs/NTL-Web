@@ -1,12 +1,12 @@
 import PageHero from "../components/PageHero";
 
 const resources = [
-  { tag: "AI", title: "How to evaluate an LLM vendor without getting locked in", text: "A practical framework for assessing model providers on cost, latency and portability." },
-  { tag: "Cloud", title: "The real cost of a 'quick' cloud migration", text: "What teams consistently underestimate — and how to budget for it properly." },
-  { tag: "Engineering", title: "Why most automation projects stall after the demo", text: "The gap between a working prototype and a production-grade workflow." },
-  { tag: "Strategy", title: "Technology roadmaps that survive contact with reality", text: "Building a roadmap flexible enough to withstand shifting priorities." },
-  { tag: "AI", title: "Applied AI vs. AI theater: a buyer's checklist", text: "Six questions to ask before greenlighting any AI initiative." },
-  { tag: "Case Study", title: "What 200+ delivered projects taught us about scope", text: "Patterns in the engagements that shipped on time — and the ones that didn't." },
+  { tag: "AI", title: "How to evaluate an LLM vendor without getting locked in", text: "The questions we wish someone had asked us before our first contract renewal came with a 4x price hike." },
+  { tag: "Cloud", title: "The real cost of a 'quick' cloud migration", text: "Every client says two weeks. It's never two weeks. Here's what actually eats the time." },
+  { tag: "Engineering", title: "Why most automation projects stall after the demo", text: "The demo works because someone fed it clean data by hand. Production doesn't have that luxury." },
+  { tag: "Strategy", title: "Technology roadmaps that survive contact with reality", text: "Most roadmaps die the first time a VP changes their mind. Here's how to build one that bends instead of breaking." },
+  { tag: "AI", title: "Applied AI vs. AI theater: a buyer's checklist", text: "If a vendor can't tell you what happens when the model is wrong, that's your answer." },
+  { tag: "Case Study", title: "What 200+ delivered projects taught us about scope", text: "The projects that went sideways almost all had the same thing in common, and it wasn't the tech." },
 ];
 
 export default function Resources() {
@@ -16,10 +16,10 @@ export default function Resources() {
         crumb="Resources"
         title={
           <>
-            Insights from <em>200+ projects</em> delivered.
+            Stuff we've learned, <em>the hard way</em>.
           </>
         }
-        lede="Practical thinking on technology, AI and strategy — drawn from real engagements, not theory."
+        lede="Not thought-leadership filler — notes from projects that actually happened, including the parts that went wrong."
       />
 
       <section className="section tight">

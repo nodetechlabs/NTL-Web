@@ -14,15 +14,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@600&display=swap"
       rel="stylesheet"
     />
-    <script>
-      (function () {
-        var t = localStorage.getItem("ntl-theme");
-        if (t !== "dark" && t !== "light") {
-          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-        }
-        document.documentElement.setAttribute("data-theme", t);
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

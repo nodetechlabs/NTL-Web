@@ -1,8 +1,30 @@
 import { useState } from "react";
 import PageHero from "../components/PageHero";
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
+
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("request failed");
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <div className="page">
@@ -10,46 +32,43 @@ export default function Contact() {
         crumb="Contact"
         title={
           <>
-            Let's build something <em>real</em>.
+            Tell us what's <em>actually</em> broken.
           </>
         }
-        lede="Tell us about your project — we'll get back to you within one business day."
+        lede="Skip the sales pitch — just tell us what you're trying to build or what's not working. A real person reads these, usually within a day."
       />
 
       <section className="section tight">
         <div className="contact-grid">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
-          >
+          <form onSubmit={handleSubmit}>
             <div className="form-field">
               <label htmlFor="name">Full name</label>
-              <input id="name" type="text" placeholder="Jane Doe" required />
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required />
             </div>
             <div className="form-field">
               <label htmlFor="email">Work email</label>
-              <input id="email" type="email" placeholder="jane@company.com" required />
+              <input id="email" name="email" type="email" placeholder="jane@company.com" required />
             </div>
             <div className="form-field">
               <label htmlFor="company">Company</label>
-              <input id="company" type="text" placeholder="Company name" />
+              <input id="company" name="company" type="text" placeholder="Company name" />
             </div>
             <div className="form-field">
               <label htmlFor="message">Tell us about your project</label>
-              <textarea id="message" placeholder="What are you looking to build?" required />
+              <textarea id="message" name="message" placeholder="What are you looking to build?" required />
             </div>
-            <button type="submit" className="btn-primary">
-              {sent ? "Message sent ✓" : "Send Message"} {!sent && <span className="arrow">→</span>}
+            <button type="submit" className="btn-primary" disabled={status === "sending"}>
+              {status === "sent" ? "Message sent ✓" : status === "sending" ? "Sending…" : "Send Message"}
+              {status === "idle" || status === "error" ? <span className="arrow">→</span> : null}
             </button>
+            {status === "error" && <p className="form-error">Something went wrong — please try again or email us directly.</p>}
           </form>
 
           <div className="contact-info-card">
             <h3>Get in touch</h3>
             <div className="info-row">
               <span>Email</span>
-              <strong>hello@nodetechlabs.com</strong>
+              <strong>info@nodetechlabs.com</strong>
             </div>
             <div className="info-row">
               <span>Phone</span>

@@ -1,13 +1,14 @@
-import { useTheme } from "../context/ThemeContext";
-
-export default function Logo({ size = 30 }: { size?: number }) {
-  const { theme } = useTheme();
-  const src = theme === "dark" ? "/mark-dark.png" : "/mark-light.png";
-
+export default function Logo({ size = 30, onDark = false }: { size?: number; onDark?: boolean }) {
   return (
     <div className="nav-logo">
-      <img src={src} alt="" width={size * 1.3} height={size} style={{ objectFit: "contain" }} />
-      <span className="nav-wordmark">
+      <img
+        src={onDark ? "/mark-dark.png" : "/mark-light.png"}
+        alt=""
+        width={size * 1.3}
+        height={size}
+        style={{ objectFit: "contain" }}
+      />
+      <span className={`nav-wordmark${onDark ? " on-dark" : ""}`}>
         <strong>NodeTech</strong>
         <em>Labs</em>
       </span>

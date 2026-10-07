@@ -1,16 +1,16 @@
 import PageHero from "../components/PageHero";
 
 const values = [
-  { icon: "★", name: "Outcomes over output", text: "We measure success by the impact we create, not the hours we bill or the lines we ship." },
-  { icon: "◆", name: "Embedded partnership", text: "We work inside your team, not alongside it — sharing context, not just deliverables." },
-  { icon: "⬡", name: "Engineering craft", text: "Quality isn't a phase we add later. It's built into how we design, build and ship from day one." },
+  { icon: "★", name: "We bill for outcomes, not hours", text: "Nobody's ever asked us for a timesheet and been happy about what they found. We'd rather be judged on whether the thing works." },
+  { icon: "◆", name: "We sit in your standups", text: "Not a kickoff call and then radio silence until the invoice. If your team uses Slack, we're in it." },
+  { icon: "⬡", name: "No separate 'quality' phase", text: "Tests and code review aren't something we bolt on in week six. If it's not built in from day one, it's not really there." },
 ];
 
 const timeline = [
-  { year: "2019", title: "Founded", text: "NodeTech Labs started as a two-person consultancy solving infrastructure problems for early-stage startups." },
-  { year: "2021", title: "AI practice launched", text: "Expanded into applied AI and automation as demand for practical, production-grade AI systems grew." },
-  { year: "2023", title: "50 clients milestone", text: "Crossed 50 clients worldwide across healthcare, finance, retail, education and manufacturing." },
-  { year: "2026", title: "200+ projects delivered", text: "Today we're a full-stack technology partner trusted by enterprises and high-growth teams alike." },
+  { year: "2019", title: "Started in a spare bedroom", text: "Two of us, a couple of early-stage clients, and a lot of infrastructure fires to put out." },
+  { year: "2021", title: "Took AI seriously", text: "Not because it was trendy — a client needed a forecasting model that actually worked, and we figured out how to build one." },
+  { year: "2023", title: "Hit 50 clients", text: "Still hadn't hired a salesperson. Most of them came from a referral from the last one." },
+  { year: "2026", title: "200+ projects in", text: "We've stopped counting the all-nighters and started counting the systems still running without us." },
 ];
 
 export default function About() {
@@ -20,17 +20,17 @@ export default function About() {
         crumb="About"
         title={
           <>
-            Turning bold ideas into <em>real impact</em>, since day one.
+            We're a small team that's <em>shipped a lot</em>.
           </>
         }
-        lede="NodeTech Labs is a technology consulting and product engineering partner, built to help ambitious teams ship faster without cutting corners on quality."
+        lede="NodeTech Labs started because two engineers were tired of watching agencies oversell and underdeliver. We'd rather stay small and be the people you actually want on the call."
       />
 
       <section className="section tight">
         <div className="section-head">
           <div>
-            <p className="label">WHAT WE BELIEVE</p>
-            <h2>Our Values</h2>
+            <p className="label">HOW WE OPERATE</p>
+            <h2>What Actually Matters To Us</h2>
           </div>
         </div>
         <div className="values-grid">
@@ -69,7 +69,7 @@ export default function About() {
           <div>
             <p className="label">JOIN US</p>
             <h2>Careers</h2>
-            <p className="sub">We're always looking for senior engineers, designers and strategists who care about craft as much as we do.</p>
+            <p className="sub">We hire slowly and rarely. If one of these fits, we'd rather hear from you directly than sort through an ATS.</p>
           </div>
         </div>
         <div className="detail-grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
